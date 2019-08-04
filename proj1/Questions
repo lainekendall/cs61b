@@ -1,0 +1,6 @@
+Questions:
+1. How does it know which columns to associate with which tables in select? (when doing NOT table.name but just name)
+2. Duplicate column names? correct error?
+3. printing?
+4. do we have to edit all three make files?
+5. Can i have ambiguous errors or do they have to explain exactly what's going on?

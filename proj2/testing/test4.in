@@ -1,0 +1,18 @@
+# One instance of the staff loa can play against another instance of the staff loa. 
+java -ea loa.Main 
+java -ea loa.Main
+===#1===
+manual black
+auto white
+seed 129384
+start
+%mb
+%iw...
+%e
+===#2===
+seed 384293
+manual white
+auto black
+start
+%ib...
+%e

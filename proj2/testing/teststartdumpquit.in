@@ -1,0 +1,7 @@
+# Check that 'start' and 'dump' and 'quit' work.
+java -ea loa.Main 
+None
+===#1===
+start
+dump
+quit

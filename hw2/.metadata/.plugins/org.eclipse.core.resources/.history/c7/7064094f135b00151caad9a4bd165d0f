@@ -1,0 +1,43 @@
+/* NOTE: The file Utils.java contains some functions that may be useful
+ * in testing your answers. */
+
+/** HW #2, Problem #1. */
+
+/** List problem.
+ *  @author Laine D Kendall
+ */
+class Lists {
+    /** Return the list of lists formed by breaking up L into "natural runs":
+     *  that is, maximal strictly ascending sublists, in the same order as
+     *  the original.  For example, if L is (1, 3, 7, 5, 4, 6, 9, 10, 10, 11),
+     *  then result is the four-item list ((1, 3, 7), (5), (4, 6, 9, 10), (10, 11)).
+     *  Destructive: creates no new IntList items, and may modify the
+     *  original list pointed to by L. */
+    static IntList2 naturalRuns(IntList L) {
+        /* *Replace this body with the solution. */
+        IntList2 result = new IntList2(L, null);
+        IntList2 pR = result;
+        if (L == null) {
+            return result;
+        } else if (L.tail == null) {
+            result.head = L;
+            return result;
+        } else { // length is 2 or more
+            IntList pL1 = L;
+            IntList pL2 = pL1.tail;
+            while (pL2 != null) {
+                if (pL1.head < pL2.head) {
+                    pL1 = pL1.tail;
+                    pL2 = pL2.tail;
+                } else {
+                    pL1.tail = null;
+                    pL1 = pL2;
+                    pL2 = pL2.tail;
+                    pR.tail = new IntList2(pL1, null);
+                    pR = pR.tail;
+                }
+            }
+        }
+        return result;
+    }
+}    

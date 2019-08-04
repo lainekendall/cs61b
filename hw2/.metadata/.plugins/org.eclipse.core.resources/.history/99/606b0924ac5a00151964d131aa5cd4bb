@@ -1,0 +1,49 @@
+import org.junit.Test;
+import static org.junit.Assert.*;
+// import IntList2.*;
+// import IntList.*;
+
+/** FIXME
+ *
+ *  @author Laine D Kendall
+ */
+
+public class ListsTest {
+    /** FIXME
+     */
+    @Test
+    public void testNaturalRuns() {
+        IntList A = IntList.list(1,2,3,1,2,3,3,3,6,7,1);
+        int[][] Abody = {{1,2,3}, {1,2,3}, {3}, {3,6,7}, {1}};
+        IntList2 Aexpected = IntList2.list(Abody);
+        IntList2 Aactual = Lists.naturalRuns(A);
+        assertEquals(Aexpected, Aactual);
+
+        IntList B = IntList.list();
+        IntList2 Bexpected = new IntList2();
+        IntList2 Bactual = Lists.naturalRuns(B);
+        assertEquals(true, Bactual.equals(Bexpected));
+
+        IntList C = IntList.list(1);
+        int[][] Cbody = {{1}};
+        IntList2 Cexpected = IntList2.list(Cbody);
+        IntList2 Cactual = Lists.naturalRuns(C);
+        assertEquals(true, Cactual.equals(Cexpected));
+
+        IntList D = IntList.list(9,1);
+        int[][] Dbody = {{9},{1}};
+        IntList2 Dexpected = IntList2.list(Dbody);
+        IntList2 Dactual = Lists.naturalRuns(D);
+        assertEquals(true, Dactual.equals(Dexpected));
+    }
+    // It might initially seem daunting to try to set up
+    // Intlist2 expected.
+   	//
+    // There is an easy way to get the IntList2 that you want in just
+    // few lines of code! Make note of the IntList2.list method that
+    // takes as input a 2D array.
+
+    public static void main(String[] args) {
+        System.exit(ucb.junit.textui.runClasses(ListsTest.class));
+    }
+}

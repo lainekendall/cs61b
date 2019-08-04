@@ -1,0 +1,56 @@
+# Tests that the staff version of loa can play a fully automated version. Ends with a win.
+java -ea loa.Main 
+None
+===#1===
+auto White
+
+set a2 e
+set a3 e
+set a4 e
+set a5 e
+set a6 e
+set a7 e
+
+set h2 e
+set h3 e
+set h4 e
+set h5 e
+set h6 e
+set h7 e
+
+set b1 e
+set c1 e
+set d1 e
+set e1 e
+set f1 e
+set g1 e
+
+set b8 e
+set c8 e
+set d8 e
+set e8 e
+set f8 e
+set g8 e
+
+
+set b1 w
+set b4 b
+set c4 w
+set e4 b
+set b5 w
+set c5 b
+set d5 w
+set e5 w
+set c6 b
+set e6 w
+set f6 w
+set g6 w
+set b7 w
+set c7 w
+set d7 w
+set d6 b
+
+
+
+dump
+start

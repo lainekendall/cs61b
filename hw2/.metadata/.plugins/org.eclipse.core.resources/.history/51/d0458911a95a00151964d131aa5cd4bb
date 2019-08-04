@@ -1,0 +1,105 @@
+import org.junit.Test;
+import static org.junit.Assert.*;
+
+/** FIXME
+ *  @author Laine D Kendall
+ */
+
+public class ArraysTest {
+    /** FIXME
+     */
+    @Test
+    public void testCatenate () {
+    	int[] A1 = {1,2,3};
+    	int[] B1 = {4,5,6};
+    	int[] expected1 = {1,2,3,4,5,6};
+    	int[] actual1 = Arrays.catenate(A1, B1);
+    	// Utils.print(expected1);
+    	// System.out.println("");
+    	// Utils.print(actual1);
+    	// System.out.println("");
+    	assertArrayEquals(expected1, actual1);
+
+    	int[] A2 = {1,2,3};
+    	int[] B2 = {};
+    	int[] expected2 = {1,2,3};
+    	int[] actual2 = Arrays.catenate(A2, B2);
+    	// Utils.print(expected2);
+    	// System.out.println("");
+    	// Utils.print(actual2);
+    	// System.out.println("");
+    	assertArrayEquals(expected2, actual2);
+
+    	int[] A3 = {};
+    	int[] B3 = {4,5,6};
+    	int[] expected3 = {4,5,6};
+    	int[] actual3 = Arrays.catenate(A3, B3);
+    	// Utils.print(expected3);
+    	// System.out.println("");
+    	// Utils.print(actual3);
+    	// System.out.println("");
+    	assertArrayEquals(expected3, actual3);
+
+    	int[] A4 = {};
+    	int[] B4 = {};
+    	int[] expected4 = {};
+    	int[] actual4 = Arrays.catenate(A4, B4);
+    	// Utils.print(expected4);
+    	// System.out.println("");
+    	// Utils.print(actual4);
+    	// System.out.println("");
+    	assertArrayEquals(expected4, actual4);
+    }
+
+    @Test
+    public void testRemove() {
+    	int[] A = {1,2,3,4,5,6};
+    	int[] expectedA = {};
+    	int[] actualA = Arrays.remove(A, 0, 7);
+    	Utils.print(expectedA);
+    	System.out.println("");
+    	Utils.print(actualA);
+    	System.out.println("");
+    	assertArrayEquals(expectedA, actualA);
+
+    	int[] B = {1,2,3,4,5,6};
+    	int[] expectedB = {1,5,6};
+    	int[] actualB = Arrays.remove(B, 1, 3);
+    	Utils.print(expectedB);
+    	System.out.println("");
+    	Utils.print(actualB);
+    	System.out.println("");
+    	assertArrayEquals(expectedB, actualB);
+
+    	int[] C = {1,2,3,4,5,6};
+    	int[] expectedC = {1,2,3,4,5,6};
+    	int[] actualC = Arrays.remove(C, 0, 0);
+    	Utils.print(expectedC);
+    	System.out.println("");
+    	Utils.print(actualC);
+    	System.out.println("");
+    	assertArrayEquals(expectedC, actualC);
+
+    	int[] D = {};
+    	int[] expectedD = {};
+    	int[] actualD = Arrays.remove(D, 5, 3);
+    	Utils.print(expectedD);
+    	System.out.println("");
+    	Utils.print(actualD);
+    	System.out.println("");
+    	assertArrayEquals(expectedD, actualD);
+
+    	int[] E = {1,2,3,4,5,6};
+    	int[] expectedE = {1,2,3,4,5,6};
+    	int[] actualE = Arrays.remove(E, 6, 3);
+    	Utils.print(expectedE);
+    	System.out.println("");
+    	Utils.print(actualE);
+    	System.out.println("");
+    	assertArrayEquals(expectedE, actualE);
+    }
+
+    public static void main(String[] args) {
+        System.exit(ucb.junit.textui.runClasses(ArraysTest.class));
+    }
+}

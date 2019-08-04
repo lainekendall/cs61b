@@ -1,0 +1,17 @@
+# Fully manual game. 
+java -ea loa.Main 
+None
+===#1===
+manual black
+manual white
+start
+b1-d3
+dump
+h6-f6
+dump
+g1-b1
+dump
+a6-c8
+dump
+b1-e4
+dump

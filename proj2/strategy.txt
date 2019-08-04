@@ -1,0 +1,15 @@
+strategy
+1. delete opponents pieces that connect their pieces
+2. move in my own piece to touch my other own pieces
+3. dont delete opponents pieces that are on the edge or not touching anything
+4. count number of pieces touching, compared to number of total pieces on the board.
+
+
+- count piles, find max/main pile, if a move moves a piece from a small pile to the main/max pile, give a higher score (5)
+- 
+
+
+
+
+
+
