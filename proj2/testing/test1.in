@@ -1,9 +1,0 @@
-# Check that the 'set' command works. 
-java -ea loa.Main 
-None
-===#1===
-start
-dump
-set c5 b
-dump
-quit
